@@ -1,11 +1,8 @@
 # 74. Search a 2D Matrix
 class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
-        m = len(matrix)
-        n = len(matrix[0])
-
         # search row
-        up, down = 0, m - 1
+        up, down = 0, len(matrix) - 1
         row = 0
         while up <= down:
             m = (up + down) // 2
@@ -14,9 +11,8 @@ class Solution:
                 up = m + 1
             else:
                 down = m - 1
-
-        # search column    
-        l, r = 0, n - 1
+            
+        l, r = 0, len(matrix[0]) - 1
         while l <= r:
             m = (l + r) // 2
             if matrix[row][m] == target:
