@@ -23,7 +23,7 @@ def postorder(root): # LRN traversal, O(n)
 ```
 <b> BFS traversal </b>
 ``` python
-def bfs(root):
+def bfs(root): # O(n)
     Q = deque()
     if root: Q.append(root)
         
